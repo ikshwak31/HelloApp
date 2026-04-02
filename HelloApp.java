@@ -7,21 +7,10 @@ public class HelloApp {
             return;
         }
 
-        // Use StringBuilder to build names
-        StringBuilder nameBuilder = new StringBuilder();
+        // Join all names with ", "
+        String names = String.join(", ", args);
 
-        // Enhanced for loop to append names
-        for (String name : args) {
-            nameBuilder.append(name).append(", ");
-        }
-
-        // Remove trailing ", " using substring
-        String names = nameBuilder.toString();
-        if (names.length() > 0) {
-            names = names.substring(0, names.length() - 2);
-        }
-
-        // Print final greeting
+        // Print greeting
         System.out.println("Hello, " + names + "!");
     }
 }
